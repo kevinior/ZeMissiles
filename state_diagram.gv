@@ -1,0 +1,17 @@
+digraph state_machine {
+    rankdir=LR;
+    node [shape = doublecircle]; DISABLED;
+    node [shape = circle];
+    DISABLED -> ENABLED [ label = "keyswitch" ];
+    ENABLED -> DISABLED [ label = "!keyswitch" ];
+    ENABLED -> ARMED [label = "toggle" ];
+    ARMED -> ENABLED [ label = "!toggle" ];
+    ARMED -> DISABLED [ label = "!keyswitch" ];
+    ARMED -> FIRING_PRESS [ label = "button" ];
+    FIRING_PRESS -> FIRING_RELEASE [ label = "key pressed" ];
+    FIRING_RELEASE -> FIRED_1 [ label = "key released" ];
+    FIRED_1 -> FIRED_2 [ label = "ticks > BUTTON_FLASH_TICKS" ];
+    FIRED_1 -> DISABLED [ label = "!toggle && !keyswitch" ];
+    FIRED_2 -> FIRED_1 [ label = "ticks > BUTTON_FLASH_TICKS" ];
+    FIRED_2 -> DISABLED [ label = "!toggle && !keyswitch" ];
+}
