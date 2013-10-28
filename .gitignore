@@ -1,3 +1,5 @@
+/firmware/ze_missiles/Debug/**/*.obj
+/firmware/ze_missiles/Debug/**/*.pp
 /firmware/ze_missiles/Debug/*.map
 /firmware/ze_missiles/Debug/*_linkInfo.xml
 /firmware/ze_missiles/Debug/*.out
