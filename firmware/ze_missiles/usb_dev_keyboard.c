@@ -1,5 +1,7 @@
+// Fake USB keyboard
+
 //*****************************************************************************
-//
+// Based on:
 // usb_dev_bulk.c - Main routines for the generic bulk device example.
 //
 // Copyright (c) 2012 Texas Instruments Incorporated.  All rights reserved.
